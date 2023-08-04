@@ -22,7 +22,7 @@ private:
 public:
 
 	base();
-
+	~base()
 
 	void login(string , string);
 	void Register(string , string);
@@ -30,6 +30,15 @@ public:
 
 };
 base::base(){}
+
+base::~base()
+{
+	for (auto& i : userdata)
+	{
+		delete i.second;
+	}
+	
+}
 
 void base::login(string user , string pass)
 {
