@@ -24,7 +24,7 @@ int main()
 		showlist();
 		int choice; cin >> choice; string username, password;
 		cout << "enter username: "; cin.ignore(); getline(cin, username);
-		cout << "enter password: "; cin.ignore(); getline(cin, password);
+		cout << "enter password: "; 		  getline(cin, password);
 
 		if (choice == 1)
 		{
