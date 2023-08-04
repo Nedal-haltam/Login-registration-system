@@ -45,9 +45,11 @@ void user_profile::showoptions()
 			editnotes();
 			break;
 		case 2:
+			cin.ignore();
 			addfriend();
 			break;
 		case 3:
+			cin.ignore();
 			changepass();
 			break;
 		case 4:
@@ -75,13 +77,13 @@ void user_profile::addfriend()
 	cout << "this is your friends list do you want to add more! (yes or no)\n";
 
 	for (auto& i : friends) cout << i << endl;
-	string choice; cin.ignore(); getline(cin, choice);
+	string choice;  getline(cin, choice);
 
 	if (choice == "no") return;
 
 	else if (choice == "yes")
 	{
-		cin.ignore(); getline(cin, choice);
+		 getline(cin, choice);
 		friends.insert(choice);
 		addfriend();
 	}
@@ -96,12 +98,12 @@ void user_profile::changepass()
 	{
 		cout << "enter no to go back\n";
 		cout << "enter old password : ";
-		string pass; cin.ignore(); getline(cin, pass);
+		string pass; getline(cin, pass);
 		if (pass == "no") return;
 
 		if (password == pass)
 		{
-			cout << "enter new password : "; cin.ignore(); getline(cin, pass);
+			cout << "enter new password : ";  getline(cin, pass);
 			password = pass;
 			return;
 		}
